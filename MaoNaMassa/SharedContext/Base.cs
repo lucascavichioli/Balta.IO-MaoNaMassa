@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MaoNaMassa.ContentContext
+namespace MaoNaMassa.SharedContext
 {
-    public class Article : Content
+    public abstract class Base : Notifiable
     {
-        public Article(string title, string url)
-           : base(title,url)
+        public Base()
         {
-
+            Id = Guid.NewGuid(); //SPOF
         }
+        public Guid Id { get; set; }
     }
 }

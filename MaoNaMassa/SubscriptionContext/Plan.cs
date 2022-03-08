@@ -5,14 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MaoNaMassa.ContentContext
+namespace MaoNaMassa.SubscriptionContext
 {
-    public class Lecture : Base
+    public class Plan : Base
     {
-        public int Ordem { get; set; }
         public string Title { get; set; }
-        public int DurationInMinutes { get; set; }
+        public decimal Price { get; set; }
 
-        public EContentLevel Level { get; set; }
     }
 }

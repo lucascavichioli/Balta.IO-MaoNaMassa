@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaoNaMassa.SharedContext;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace MaoNaMassa.ContentContext
 {
-    public abstract class Content
+    public abstract class Content : Base
     {
-        public Content()
+        public Content(string title, string url)
         {
-            Id = Guid.NewGuid(); //SPOF
+            Title = title;
+            Url = url;
         }
-        public Guid Id { get; set; }
         public string Title { get; set; }
         public string Url { get; set; }
     }
